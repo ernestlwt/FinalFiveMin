@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clinic_cardview"
+    app:cardUseCompatPadding="true" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clinic_name"
+            android:text="Name"
+            android:layout_marginLeft="7dp"
+            android:layout_alignParentLeft="true"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clinic_address"
+            android:text="Address"
+            android:layout_marginLeft="7dp"
+            android:layout_alignParentLeft="true"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_below="@+id/clinic_rating" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clinic_rating"
+            android:layout_alignParentLeft="true"
+            android:numStars="5"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:isIndicator="true"
+            android:layout_below="@+id/clinic_name"
+            style="@style/RatingBarStyle"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

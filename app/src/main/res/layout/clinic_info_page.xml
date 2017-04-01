@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_clinic_info_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="finalcompilation.finalfivemin.clinic.ClinicInfoPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/second_relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="finalcompilation.finalfivemin.clinic.ClinicInfoPage">
+
+
+    <TextView
+        android:text="Clinic Name"
+        android:id="@+id/clinicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/clinic"
+        android:layout_below="@+id/clinicName"
+        android:layout_centerHorizontal="true" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:isIndicator="true"
+        style="@style/RatingBarStyle"/>
+
+
+    <TextView
+        android:text="Reviews"
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/ratingBar2"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/image_review"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        app:srcCompat="@drawable/clinic_reviews"
+        android:layout_below="@+id/reviews" />
+
+
+    <TextView
+        android:text="Write Review"
+        android:id="@+id/write_review"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_review" />
+
+
+    <ImageView
+        android:id="@+id/image_clinicsave"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/clinic_save"
+        android:layout_below="@+id/reviews"
+        android:layout_marginTop="15dp"
+        android:layout_alignBaseline="@+id/image_review"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Save"
+        android:id="@+id/Save_Display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/write_review"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/image_navigation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/clinic_navigation"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/reviews"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/Navigation_Display"
+        android:text="Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/write_review"
+        android:layout_alignStart="@id/image_navigation" />
+
+
+    <TextView
+        android:id="@+id/Phone_Display"
+        android:text="Contact Number"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/write_review"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:text="phone"
+        android:id="@+id/clinicContact"
+        android:layout_width="wrap_content"
+        android:layout_alignStart="@+id/address"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Phone_Display"
+ />
+
+    <TextView
+        android:text="Address"
+        android:layout_marginTop="10dp"
+        android:id="@+id/address_displayonly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/address"
+        android:layout_below="@+id/clinicContact" />
+
+    <TextView
+        android:text="address_replaced"
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_displayonly"
+        android:layout_alignStart="@+id/Phone_Display" />
+
+            <TextView
+                android:text="  "
+                android:id="@+id/formatblock"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/address" />
+
+        </RelativeLayout>
+</ScrollView>
+
+<android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_anchorGravity="bottom"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:itemBackground="@color/colorPrimary" />
+
+</RelativeLayout>
+

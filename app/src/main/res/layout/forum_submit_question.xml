@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ask_qns"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="finalcompilation.finalfivemin.forum.ForumSubmitQuestion">
+
+    <Button
+        android:text="SUBMIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="145dp"
+        android:id="@+id/submitQns"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/qnsText"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginTop="93dp"
+        android:id="@+id/qnsText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColorLink="@android:color/darker_gray"
+        tools:text="Your question"
+        android:layout_below="@+id/textView"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:autoText="false" />
+
+    <TextView
+        android:text="ASK A QUESTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColorLink="?attr/actionMenuTextColor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:itemBackground="@color/colorPrimary" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    -->
+
+    <!-- added by hengjie -->
+    <color name="colorPrimary">#51d8c7</color>
+    <color name="colorPrimaryDark">#51d8c7</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorBackground">#413e4f</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextHint">#51d8c7</color>
+
+    <!-- added by ernest -->
+    <color name="colorTitleText">#1a9b8c</color>
+    <color name="colorContentText">#111111</color>
+    <color name="colorSubText">#666666</color>
+    <color name="colorRadioButton">#444444</color>
+
+    <!-- for clinic -->
+    <color name="colorRatingBar">#ffcc00</color>
+
+</resources>

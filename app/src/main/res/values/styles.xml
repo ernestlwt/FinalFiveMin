@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- TextStyles -->
+    <style name="TitleTextStyle" >
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorTitleText</item>
+    </style>
+
+    <style name="ContentTextStyle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/colorContentText</item>
+    </style>
+
+    <style name="SubTextStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/colorSubText</item>
+    </style>
+    <!-- End of TextView -->
+
+    <!-- CardView (to be put in relative layout if your cardview uses relative layout to store its content)-->
+    <style name="CardViewStyle">
+        <item name="android:background">#80BBBBBB</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <!-- End of CardView -->
+
+    <!-- RatingBar -->
+    <style name="RatingBarStyle">
+        <item name="android:progressTint">@color/colorRatingBar</item>
+        <item name="android:backgroundTint">@color/colorRatingBar</item>
+        <item name="android:secondaryProgressTint">@color/colorRatingBar</item>
+    </style>
+
+</resources>

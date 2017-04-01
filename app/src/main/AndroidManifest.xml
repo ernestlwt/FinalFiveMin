@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="finalcompilation.finalfivemin">
+
+    <!-- permissions for clinics -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permissions.READ_GSERVICES" />
+
+    <permission
+        android:name="finalcompilation.finalfivemin.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="finalcompilation.finalfivemin.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- end of permissions for clinics -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Login pages -->
+        <activity android:name=".login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.RegisterActivity">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.login.RegisterActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- end of login pages -->
+
+
+        <!-- start of clinic pages -->
+        <activity android:name=".clinic.ClinicsMain">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicsMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicInfoPage">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicInfoPage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicWriteReview">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicWriteReview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicListDisplay"
+            android:windowSoftInputMode="adjustPan"> <!-- prevent keyboard from resizing window -->
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicListDisplay" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicMapDirection">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicMapDirection" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicSeeReview">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicSeeReview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".clinic.ClinicFavList">
+            <intent-filter>
+                <action android:name="finalcompilation.finalfivemin.clinic.ClinicFavList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- key for google maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB8XpYxljUEr3TRfRZiD7F1paINSxOrHKU" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- end of clinic pages -->
+
+
+        <!-- start of first aid pages -->
+        <activity android:name=".firstaid.FirstAidMainActivity" /> <!-- if wrong check manifest again -->
+        <activity android:name=".firstaid.Content" />
+        <activity android:name=".firstaid.Type" />
+        <!-- end of dirst aid pages -->
+
+
+        <!-- start of article pages -->
+        <activity android:name=".article.ArticleMainActivity" />
+        <activity android:name=".article.ArticleContentActivity" />
+        <!-- end of article pages -->
+
+
+        <!-- start of forum pages -->
+        <activity android:name=".forum.ForumMain">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".forum.ForumDisplayQuestion" />
+        <activity android:name=".forum.ForumSubmitQuestion" />
+        <activity android:name=".forum.ForumDisplayAnswer" />
+        <activity android:name=".forum.ForumSubmitAnswer" />
+        <activity android:name=".forum.UserPageForumQuestion" />
+        <activity android:name=".forum.UserPageForumAnswer" />
+        <!-- end of forum pages -->
+
+        <activity android:name=".UserMainActivity"></activity>
+    </application>
+
+</manifest>
