@@ -33,7 +33,7 @@ public class ArticleMainActivity extends AppCompatActivity {
         // replace top after compilation
         Bundle bundle = getIntent().getExtras();
         int userID = bundle.getInt(Constants.USER_ID_INTENT);
-        ArticleActivity aa = new ArticleActivity(this, recyclerView,(new UserDatabaseHelper(this)).getUser(userID).getPreference());
+        ArticleActivity aa = new ArticleActivity(this, recyclerView,(new UserDatabaseHelper(this)).getUser(userID));
 
         aa.execute();
 

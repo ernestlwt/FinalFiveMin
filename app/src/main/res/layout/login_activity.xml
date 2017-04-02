@@ -21,7 +21,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:src="@drawable/logo" />
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo2" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutEmail"

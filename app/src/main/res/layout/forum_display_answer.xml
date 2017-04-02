@@ -15,6 +15,9 @@
         android:id="@+id/ansButton"
         android:textColor="@color/colorPrimaryDark"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 

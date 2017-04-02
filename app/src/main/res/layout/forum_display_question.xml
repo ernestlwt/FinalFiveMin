@@ -15,6 +15,8 @@
         android:id="@+id/askButton"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 

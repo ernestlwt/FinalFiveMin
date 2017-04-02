@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import finalcompilation.finalfivemin.R;
 import finalcompilation.finalfivemin.entity.FeedItem;
+import finalcompilation.finalfivemin.entity.User;
 
 /**
  * Created by Ernest on 3/3/2017.
@@ -25,14 +26,14 @@ public class ArticleActivity extends AsyncTask<Void,Void,Void>{
     ProgressDialog progressDialog;
     ArrayList<FeedItem> listOfFeedItem;
     RecyclerView recyclerView;
-    int source;
+    User user;
 
 
 
-    public ArticleActivity(Context context, RecyclerView recyclerView, int source){
+    public ArticleActivity(Context context, RecyclerView recyclerView, User user){
         this.context = context;
         this.recyclerView = recyclerView;
-        this.source = source;
+        this.user = user;
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Loading...");
     }
@@ -54,7 +55,7 @@ public class ArticleActivity extends AsyncTask<Void,Void,Void>{
 
     @Override
     protected Void doInBackground(Void... params) {
-        ArticleXMLProcessor processor = new ArticleXMLProcessor(source);//edit to put in user preferred source
+        ArticleXMLProcessor processor = new ArticleXMLProcessor(user);//edit to put in user preferred source
         listOfFeedItem = processor.getListOfFeedItem();
         return null;
     }

@@ -19,6 +19,7 @@ import finalcompilation.finalfivemin.Constants;
 import finalcompilation.finalfivemin.entity.AsiaoneFeedItem;
 import finalcompilation.finalfivemin.entity.FeedItem;
 import finalcompilation.finalfivemin.entity.ShapeFeedItem;
+import finalcompilation.finalfivemin.entity.User;
 
 /**
  * Created by Ernest on 3/3/2017.
@@ -29,8 +30,8 @@ public class ArticleXMLProcessor{
     ArrayList<FeedItem> listOfFeedItem;
     int source;
 
-    public ArticleXMLProcessor(int source){
-        this.source = source;
+    public ArticleXMLProcessor(User user){
+        this.source = user.getPreference();
         listOfFeedItem = new ArrayList<FeedItem>();
         getDataFromURL();
         processDocument();

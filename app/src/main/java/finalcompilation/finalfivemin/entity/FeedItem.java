@@ -8,7 +8,7 @@ import org.w3c.dom.Document;
 
 public abstract class FeedItem {
     String title;
-    protected String description;
+    String description;
     String date;
     String link;
 
