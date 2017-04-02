@@ -62,24 +62,13 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/user_clinic"/>
 
-    <TextView
-        android:text="View Forum Answer"
-        android:id="@+id/user_answer"
-        android:textAppearance="@style/ContentTextStyle"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_height="30dp"
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/user_question"/>
-
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
-        android:layout_below="@+id/user_answer">
+        android:layout_below="@+id/user_question">
 
         <TextView
             android:id="@+id/radio_title"

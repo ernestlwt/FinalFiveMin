@@ -52,7 +52,7 @@ public class UserPageForumAnswer extends AppCompatActivity {
             qnsID = bundle.getInt("QnsID");
             System.out.println("got from showQns qnsID : " + qnsID);
             //fm.getAns(catID, qnsID);
-            userID = bundle.getInt("UserID");
+            userID = bundle.getInt(Constants.USER_ID_INTENT);
             System.out.println("got from showQns userID : " + userID);
 
             //ansList = myDb.getAns(catID, qnsID);
@@ -83,8 +83,6 @@ public class UserPageForumAnswer extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        Bundle bundle = getIntent().getExtras();
-                        int userID = bundle.getInt(Constants.USER_ID_INTENT);
                         Intent nextIntent;
                         switch (item.getItemId()) {
                             case R.id.bottom_nav_clinic:

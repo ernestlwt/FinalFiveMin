@@ -326,8 +326,6 @@ public class Type extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        Bundle bundle = getIntent().getExtras();
-                        int userID = bundle.getInt(Constants.USER_ID_INTENT);
                         Intent nextIntent;
                         switch (item.getItemId()) {
                             case R.id.bottom_nav_clinic:

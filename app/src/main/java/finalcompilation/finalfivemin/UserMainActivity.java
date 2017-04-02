@@ -32,7 +32,6 @@ public class UserMainActivity extends AppCompatActivity {
     TextView usernameText;
     TextView clinicText;
     TextView questionText;
-    TextView answerText;
     RadioButton shapeRB;
     RadioButton asiaoneRB;
 
@@ -53,7 +52,6 @@ public class UserMainActivity extends AppCompatActivity {
         usernameText = (TextView) findViewById(R.id.user_name);
         clinicText = (TextView) findViewById(R.id.user_clinic);
         questionText = (TextView) findViewById(R.id.user_question);
-        answerText = (TextView) findViewById(R.id.user_answer);
         shapeRB = (RadioButton) findViewById(R.id.radio_shape);
         asiaoneRB = (RadioButton) findViewById(R.id.radio_asiaone);
 
@@ -69,7 +67,6 @@ public class UserMainActivity extends AppCompatActivity {
         }
         onClickClinic();
         onClickQuestion();
-        onClickAnswer();
 
         //bottom nav bar
         final Context myContext = this;
@@ -80,8 +77,6 @@ public class UserMainActivity extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        Bundle bundle = getIntent().getExtras();
-                        int userID = bundle.getInt(Constants.USER_ID_INTENT);
                         Intent nextIntent;
                         switch (item.getItemId()) {
                             case R.id.bottom_nav_clinic:
@@ -151,19 +146,6 @@ public class UserMainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v){
                         Intent intent = new Intent(ctx, UserPageForumQuestion.class);
-                        intent.putExtra(Constants.USER_ID_INTENT,userID);
-                        startActivity(intent);
-                    }
-                }
-        );
-    }
-
-    public void onClickAnswer(){
-        answerText.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        Intent intent = new Intent(ctx, UserPageForumAnswer.class);
                         intent.putExtra(Constants.USER_ID_INTENT,userID);
                         startActivity(intent);
                     }

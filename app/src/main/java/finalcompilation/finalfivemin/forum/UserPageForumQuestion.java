@@ -42,7 +42,7 @@ public class UserPageForumQuestion extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             //catID = Integer.parseInt(bundle.get("CatID").toString());
-            userID = bundle.getInt("UserID");
+            userID = bundle.getInt(Constants.USER_ID_INTENT);
             System.out.println("from main activity UserID : " + userID);
             //System.out.println("from main activity CatID : "+ catID);
 
@@ -66,7 +66,7 @@ public class UserPageForumQuestion extends AppCompatActivity {
                             qns = qnsList.get(position);
                             qnsID = qns.getQnsID();
                             i.putExtra("QnsID", qnsID);
-                            i.putExtra("UserID", userID);
+                            i.putExtra(Constants.USER_ID_INTENT, userID);
                             startActivity(i);
                         }
                     }
@@ -82,8 +82,6 @@ public class UserPageForumQuestion extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        Bundle bundle = getIntent().getExtras();
-                        int userID = bundle.getInt(Constants.USER_ID_INTENT);
                         Intent nextIntent;
                         switch (item.getItemId()) {
                             case R.id.bottom_nav_clinic:
