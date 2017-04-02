@@ -61,7 +61,7 @@ public class UserPageForumAnswer extends AppCompatActivity {
             for(int i=0; i<ansList.size(); i++){
                 ForumAnswer ans = ansList.get(i);
                 ansText.add(ans.getAns());
-                user = userDB.getUser(userID);
+                user = userDB.getUser(ans.getAnswererID());
                 nameList.add(user.getName());
                 credList.add(user.getCredential());
             }

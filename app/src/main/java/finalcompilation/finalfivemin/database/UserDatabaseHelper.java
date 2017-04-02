@@ -75,7 +75,7 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
-        values.put(COLUMN_USER_CREDENTIAL, user.getCredential());
+        values.put(COLUMN_USER_CREDENTIAL, "Doctor");
         values.put(COLUMN_USER_PROFESSIONAL, 0);
         values.put(COLUMN_USER_PREFERENCE, 0);
 
